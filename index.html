@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G&TO - Casa de Moda com roupas no Estilo Natural Esportivo</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="img/G&TO_LogoAtualizado_SemFundo.png">
+    <!-- importando fonte kayak sans -->
+    <link href="https://fonts.cdnfonts.com/css/kayak-sans" rel="stylesheet">
+    <!-- colocando descrição do site -->
+    <meta name="description" content="Uma Casa de Moda comprometida com o Movimento ESG, 
+    focada em roupas no Estulo Natural Esportivo para quem busca por roupas confortáveis e despojadas.">
+    <!-- importando icone de menu do google -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <!-- link do ícone do google -->
+    <script src="https://kit.fontawesome.com/ff85b2f1f6.js" crossorigin="anonymous"></script>
+
+    <!-- Mensagem de alerta antes de enviar o email -->
+    <!-- função para funcionamento do menu -->
+    <script>
+        function mensagem() {
+            alert("Você será redirecionado para o seu servidor de email, caso não esteja logado no seu email " +
+                "efetue o login e tente novamente!")
+        }
+
+        function click_menu() {
+            if (itens.style.display == 'block') {
+                itens.style.display = 'none'
+            } else {
+                itens.style.display = 'block'
+            }
+        }
+
+        function tamanho_site() {
+            if (window.innerWidth > 768) {
+                itens.style.display = 'flex'
+            } else {
+                itens.style.display = 'none'
+            }
+        }
+
+    </script>
+
+</head>
+
+<!-- html faz a estrutura
+o css faz a aparência
+o java faz a funcionalidade -->
+
+<body onresize="tamanho_site()">
+    <!-- cabeçalho -->
+    <header>
+        <nav class="alinhamento">
+            <a class="link_logo" href="#">
+
+                <!-- colocando logo da G&TO -->
+                <!-- coloca se o _ na classe para que ele entenda como uma classe só, 
+                    se utilizarmos o espaço ele reconhece como duas classes -->
+                <img class="logo" src="img/G&TO_logo.png" alt="O logotipo da Jeito é composto por uma fonte moderna e condensada,
+                com um circulo incompleto ao redor trazendo consigo a frase Estilo Natural Esportivo para representar o estilo 
+                principal da marca, além disso, a paleta de cores contém um tom de branco um pouco mais amarelado e verde escuro, 
+                sendo que as letras e o circulo são brancos, contendo o elemento do e comercial e a letra o um pouco de opacidade,
+                e seu fundo é composto pela cor verde escuro.">
+            </a>
+
+            <!-- menu -->
+            <ul class="menu" id="itens">
+                <li><a href="#">Home</a></li>
+                <li><a href="#quem_somos">Quem Somos</a></li>
+                <li><a href="#conheca_esg">Conheça a ESG</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+
+            <!-- colocando o menu de hamburguer -->
+            <span id="burguer" class="material-symbols-outlined" onclick="click_menu()">menu</span>
+
+
+        </nav>
+    </header>
+
+    <!-- colocando parallax -->
+    <style class="parallax" alt="Banner em parallax que contém a imagem de quatro modelos usando roupas do Estilo Natural Esportivo
+    com a frase vista-se do seu Jeito centralizada na imagem com as cores da marca.">
+        .parallax {
+            /* The image used */
+            background-image: url("img/modelos_04.png");
+
+            /* Set a specific height */
+            min-height: 500px;
+
+            /* Create the parallax scrolling effect */
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+    <!-- parallax -->
+    <div class="parallax"></div>
+
+    <!-- botão de voltar para o topo  -->
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+    <script>
+        // Get the button
+        let mybutton = document.getElementById("myBtn");
+        
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {scrollFunction()};
+        
+        function scrollFunction() {
+          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+          } else {
+            mybutton.style.display = "none";
+          }
+        }
+        
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+          document.body.scrollTop = 0;
+          document.documentElement.scrollTop = 0;
+        }
+        </script>
+
+    <main>
+        <h1>Página inicial da Jeito</h1>
+
+        <!-- quem somos -->
+        <section class="quem_somos alinhamento" id="quem_somos">
+            <img class="primeira_foto" src="img/camiseta_brooklyn.jpg" alt="A imagem mostra uma modelo utilizando uma camiseta branca
+            com a palavra Brooklyn em verde escuro e um shorts preto. Ela também usa acessórios de prata como brincos de argola, 
+            colar, anéis e uma pulseira.">
+
+            <img class="modelos_04" src="./img/modelos_04.png" alt="">
+
+            <div class="sobre">
+                <p class="sobre_titulo">Olá, somos a G&TO!</p>
+                <p class="sobre_texto">Uma casa de moda comprometida com o movimento ESG, focada em roupas no Estulo
+                    Natural Esportivo para quem buscar por roupas confortáveis e despojadas.
+                </p>
+                <button class="btn_esg">
+                    <a href="#conheca_esg">Conheça a ESG</a>
+                </button>
+            </div>
+        </section>
+
+        <!-- cria se uma nova section pois é um outro conteudo -->
+        <!-- data -->
+        <section class="data">
+            <!-- span também é uma tag de bloco de texto -->
+            <!-- data é sempre na tag time -->
+            <p>Lançamento da <span>g&to</span></p>
+            <time datetime="2023-21-06">21/06/2023</time>
+        </section>
+
+        <!-- imagens -->
+        <!-- adiciona se uma div a section apesar de ser um mesmo conteúdo para que
+        haja mais de uma funcionalide (isso pode ajudar no CSS!) -->
+        <section class="imagens">
+            <div class="imgs alinhamento">
+                <!-- imagem 1 -->
+                <img class="img_01"
+                    src="https://blog.mariafilo.com.br/wp-content/uploads/2021/08/03-04-Blog-Banners-5.jpg" alt="A imagem mostra duas mulheres de óculos escuros e brincos de argola. A mulher a esquerda
+                 usa um sueter branco e preto, com listras horizontais, e um shorts verde musgo com um cinto de 
+                 couro marrom claro. Ela também segura a alça de uma bolsa preta, cujo não é possível visualizar 
+                 completamente na imagem. A mulher a direita usa um conjunto branco e azul caribe, com sandalhas 
+                brancas e segura uma bolsa de alça dupla na cor verde exército.">
+                <!-- imagem 2 -->
+                <img class="img_02" src="img/estilo_esportivo_sem_marcadagua.jpg" alt="A imagem mostra três mulheres com moletom Esportivo
+                em um fundo verde. A mulher a esquerda usa um moletom branco com letras em azul escuro, escrito yale university, ou 
+                universidade yale em português, com a palavra yale em destaque, além de usar um boné e calça jeans rasgada no joelho.
+                A mulher ao centro usa um moletom verde com uma logo circular branca escrita sporty and rich, além de uma saia bege, ela 
+                também usa um prendedor de cabelo de mesma cor que a saia no braço direito e uma pulseira esportiva no esquerdo nas cores de 
+                sua roupa, e segura uma raquete de tênis com as duas mãos. A mulher a direita cobre o rosto com sua mão direita. Ela usa um 
+                moletom azul escuro com detalhes em branco e verde escuro nas mangas, gola em v listrada, a palavra Brooklyn em verde água 
+                escuro e bordas brancas, além de uma saia xadres nas cores azul escuro e verde escuro.">
+                <!-- imagem 3 -->
+                <img class="img_03" src="img/estilo_natural_sem_marcadagua.png" alt="A imagem traz três mulheres em um fundo branco, 
+                todas com um casaco esportivo. A mulher a esquerda usa um casaco esportivo verde escuro, com mangas bege e a letra m 
+                em destaque no lado esquerdo, da mesma cor que as mangas. Também usa calça jeans e segura uma cesta de mercado verde 
+                escuro. A mulher ao centro usa um casaco no estilo esportivo, porém nas cores preto e branco. Ele também tem uma letra 
+                ao lado esquerdo porém não é possivel visualizar completamente. Ela usa um shorts jeans desfiado na parte inferior e 
+                óculos escuros. Já a mulher a direita está de costas com o rosto virado para trás, usa um casaco azul escuro e branco,
+                com uma logo circular escrita everlast em branco. Ela também usa óculos escuros.">
+            </div>
+        </section>
+
+        <section class="esg alinhamento" id="conheca_esg">
+            <div class="sobre_esg">
+                <p class="sobre_esg_titulo">
+                    o que é ESG?
+                </p>
+                <p class="sobre_esg_texto">
+                    ESG é um conjunto de ideias e práticas que avaliam como as
+                    empresas cuidam do meio ambiente, das pessoas que trabalham
+                    com elas e de como são administradas. Por exemplo, uma empresa que usa
+                    materias recicláveis e se preocupa em ter um ambiente de trabalho
+                    saudável para os funcionários tem uma boa nota em ESG. Isso é
+                    importante porque muitas pessoas estão preocupadas em apoiar
+                    empresas que cuidam do mundo e das pessoas, não só em ganhar dinheiro.
+                </p>
+            </div>
+            <img src="https://static.stealthelook.com.br/wp-content/uploads/2022/02/se-voce-tem-o-estilo-basico-voce-precisa-conhecer-essas-influenciadoras-aniyah-20220228142833.jpg"
+                alt="A imagem mostra uma modelo posando na calçada de uma casa, em frente a uma planta com folhas grandes 
+                que ultrapassam sua altura. Ela usa uma regata de setim, calça de cor terrosa, próxima a marrom claro, 
+                brinco de argola dourada e usa óculos escuros com armação de oncinha. A modelo também segura uma bolsa da 
+                Louis Vuitton marrom escuro.">
+        </section>
+
+        <!-- formulário -->
+        <section class="formulario">
+            <p class="formulario_titulo">Ficou com alguma dúvida?</p>
+
+            <!-- crude? método com todas as operações abaixo -->
+            <!-- tem em todos os tipode de site, incluindo redes sociais -->
+            <!-- C - (criar) R (listar) U (atualizar) D (excluir) -->
+            <!-- tem que configurar essa funcionalidade com java -->
+            <form action="mailto:geto@gmail.com">
+                <!-- nome -->
+                <div>
+                    <label for="name">Nome</label>
+                    <input class="borda" type="text" id="name" name="name">
+                </div>
+                <!-- email -->
+                <div>
+                    <label for="email">Email</label>
+                    <input class="borda" type="email" id="email" name="email">
+                </div>
+                <!-- mensagem (ficou com duvida) -->
+                <div>
+                    <label for="message">Mensagem:</label>
+                    <textarea class="borda" name="message" id="message" cols="40" rows="6"></textarea>
+                </div>
+
+                <button class="btn_forms" type="submit" onclick="mensagem()">Enviar</button>
+
+            </form>
+        </section>
+
+        <!-- Contato -->
+        <section class="contato alinhamento" id="contato">
+            <p class="contato_titulo">Contato</p>
+
+            <div class="conteudo_contato">
+                <div class="borda_mapa">
+                    <iframe class="mapa"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3655.6988997567564!2d-46.570724299999995!3d-23.615129199999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5cec439b9ce3%3A0x92940269447ce633!2sR.%20Niter%C3%B3i%2C%20180%20-%20Centro%2C%20S%C3%A3o%20Caetano%20do%20Sul%20-%20SP%2C%2009510-200!5e0!3m2!1spt-BR!2sbr!4v1683121536755!5m2!1spt-BR!2sbr"
+                        class="mapa" height="350" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+
+                <!-- para adição de icones primeiro adicionar o link disponivel no seu pacote do font awesome
+                após isso adicionar o link html na div desejada (dentro do grupo) 
+                utiliza se a tag i de icons para adicionar os icons, ela é uma tag vazia que serve somente para isso -->
+                <!-- a classe da tag dos códigos varia de sua funcionalidade, a brands funciona para marcas e as demias são 
+                variações de estilo. a ultima tag diz o formato (phone, envelope ou locatiuon dot) então é possivel 
+                realizar alteração no próprio html. todas começam com fa. -->
+                <div class="contato_info">
+                    <div class="info">
+                        <i class="fa-solid fa-phone"></i>
+                        <p>(99) 99999-9999</p>
+                    </div>
+
+
+                    <div class="info">
+                        <i class="fa-solid fa-envelope"></i>
+                        <p>contato@geto.com</p>
+                    </div>
+
+
+                    <div class="info">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <p>Rua Niterói, 180 - SCS</p>
+                    </div>
+
+
+                    <div class="info">
+                        <i class="fa-brands fa-instagram"></i>
+                        <p>@geto</p>
+                    </div>
+
+
+                    <div class="info">
+                        <i class="fa-brands fa-tiktok"></i>
+                        <p>@geto</p>
+                    </div>
+
+
+                    <div class="info">
+                        <i class="fa-brands fa-facebook"></i>
+                        <p>@geto</p>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- se quiser criar mais de um elemento igaul uasr o * e a quantidade desejada como
+         "div*3" ou "class*4", também é possivel adicionar a classe durante a criação da tag
+        ao adicionar um ponto e colocar o nome em seguida como "div.info" -->
+
+    <footer>
+        <!-- existe uma tabela chamada "ascii" que tem códigos para simbolos especiais 
+        como o de copyright (usado abaixo), entrar pelo site rapidtables -->
+        <p>Todos os direitos reservados &#169; G&TO</p>
+    </footer>
+</body>
+
+</html>
